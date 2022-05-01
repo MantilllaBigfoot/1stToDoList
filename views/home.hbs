@@ -17,9 +17,14 @@
 
     <div id="tasks">
       {{#each todos}}
-        <form action="/edit" method="POST">
-          <div class="task">
-
+        <form method="POST">
+          {{#if done}}
+          <div class="task" style="background-color: gray;">
+          {{else}}
+          <div class="task" >
+             <button class="done" formaction="/mark">Done</button>
+          {{/if}}
+           
             <div id="content">
 
               <input
@@ -27,14 +32,11 @@
                 type="text"
                 class="text"
                 value="{{name}}"
+                readonly
+                formaction="/mark"
               />
-
             </div>
-            <div class="actions">
-              <button class="delete">Delete</button>
-
-            </div>
-
+             <button class="delete" formaction="/delete">Delete</button>
           </div>
         </form>
 

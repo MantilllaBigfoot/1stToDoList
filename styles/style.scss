@@ -60,7 +60,7 @@ button {
   padding: 1rem;
   border-radius: 1rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   color: var(--light);
 }
 
@@ -70,7 +70,7 @@ button {
 
 #new-task-submit {
   color: var(--pink);
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   font-weight: 700;
   background-image: linear-gradient(to right, var(--pink), var(--purple));
   -webkit-background-clip: text;
@@ -100,7 +100,7 @@ main {
 }
 
 .task-list h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   color: var(--gray);
   margin-bottom: 1rem;
@@ -118,17 +118,14 @@ main {
 
 #tasks .task .text {
   color: white;
-  font-size: 1.125rem;
+  font-size: 0.8rem;
   width: 100%;
   display: block;
   transition: 0.4s;
 }
 
-#tasks .task .actions {
+.task button {
   margin: 0 -0.5rem;
-}
-
-.task .actions button {
   cursor: pointer;
   margin: 0 0.5rem;
   font-size: 0.8rem;
@@ -137,20 +134,18 @@ main {
   transition: 0.4s;
 }
 
-.task .actions button:hover {
+.task button:hover {
   opacity: 0.8;
 }
 
-.task .actions button:active {
+.task button:active {
   opacity: 0.6;
 }
 
-.task .actions .edit {
-  background-image: linear-gradient(to right, var(--pink), var(--purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.task .delete {
+  color: crimson;
 }
 
-.task .actions .delete {
-  color: crimson;
+.task .done {
+  color: greenyellow;
 }
