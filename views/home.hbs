@@ -1,6 +1,6 @@
 <header>
   <h1>ToDoList </h1>
-  <form id="new-task-form" method="POST">
+  <form action="/add" id="new-task-form" method="POST">
     <input
       type="text"
       name="todo"
@@ -17,18 +17,31 @@
 
     <div id="tasks">
       {{#each todos}}
-        <div class="task">
-          <div id="content">
-            <input type="text" class="text" value="{{name}}" />
+        <form action="/edit" method="POST">
+          <div class="task">
+
+            <div id="content">
+
+              <input
+                name="nameInput"
+                type="text"
+                class="text"
+                value="{{name}}"
+              />
+
+            </div>
+            <div class="actions">
+              <button class="delete">Delete</button>
+
+            </div>
+
           </div>
-          <div class="actions">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
-          </div>
-        </div>
+        </form>
+
       {{/each}}
 
     </div>
+
   </section>
 </main>
 

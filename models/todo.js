@@ -7,7 +7,12 @@ const schema = new mongoose.Schema({
     type: String,
     trim: true,
     required: true,
-    maxlength: 300
+    maxlength: 300,
+    unique: true
+  },
+  done: {
+    type: Boolean,
+    default: false
   }
 });
 
