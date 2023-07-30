@@ -7,11 +7,17 @@ const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const serveFavicon = require('serve-favicon');
 const baseRouter = require('./routes/base');
+const { handlebars } = require('hbs');
 
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+handlebars.registerHelper('isGreaterThan', (input) => {
+  console.log(input);
+  return input.length > 25 ? true : false;
+});
 
 app.use(serveFavicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 app.use(
@@ -25,6 +31,7 @@ app.use(
     sourceMap: process.env.NODE_ENV === 'development'
   })
 );
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));

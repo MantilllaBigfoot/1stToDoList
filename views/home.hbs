@@ -25,6 +25,7 @@
              <button class="done" formaction="/mark">    </button>
           {{/if}}  
             <div id="content">
+              {{#if (isGreaterThan name)}}
               <p class="marquee">
               <input
                 name="nameInput"
@@ -35,6 +36,16 @@
                 formaction="/mark"
               />
               </p>
+              {{else}}
+                            <input
+                name="nameInput"
+                type="text"
+                class="text"
+                value="{{name}}"
+                readonly
+                formaction="/mark"
+              />
+              {{/if}}
             </div>
              <button class="delete" formaction="/delete">     </button>
           </div>
