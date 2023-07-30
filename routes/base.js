@@ -6,8 +6,8 @@ const Todo = require('../models/todo');
 
 router.get('/', (req, res, next) => {
   Todo.find()
+    .sort({ done: 1 })
     .then((todos) => {
-      console.log(todos);
       res.render('home', { todos });
     })
     .catch((err) => {

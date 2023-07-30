@@ -134,7 +134,7 @@ main {
   display: inline-block;
 }
 
-.marquee span {
+.marquee input {
   display: inline-block;
   -webkit-animation: marquee 5s linear infinite;
 }

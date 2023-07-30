@@ -22,21 +22,21 @@
           <div class="task" style="background-color: gray;">
           {{else}}
           <div class="task" >
-             <button class="done" formaction="/mark"></button>
+             <button class="done" formaction="/mark">    </button>
           {{/if}}  
             <div id="content">
-                {{!-- <marquee>{{name}}</marquee> --}}
-              <p class="marquee"><span>{{name}}</span></p>
-              {{!-- <input
+              <p class="marquee">
+              <input
                 name="nameInput"
                 type="text"
                 class="text"
                 value="{{name}}"
                 readonly
                 formaction="/mark"
-              /> --}}
+              />
+              </p>
             </div>
-             <button class="delete" formaction="/delete"></button>
+             <button class="delete" formaction="/delete">     </button>
           </div>
         </form>
 
