@@ -108,7 +108,7 @@ main {
 
 #tasks .task {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   min-width: 14rem;
   background-color: var(--darkest);
   padding: 1rem;
