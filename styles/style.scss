@@ -119,6 +119,8 @@ main {
 #content {
   max-width: 60%;
   min-width: 60%;
+  max-height: 2rem;
+  min-height: 2rem;
   display: flex;
   align-items: center;
 }
@@ -126,7 +128,8 @@ main {
 #content .text {
   color: white;
   font-size: 0.8rem;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   overflow: hidden;
   transition: 0.4s;
   text-align: center;
