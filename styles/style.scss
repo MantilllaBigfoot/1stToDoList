@@ -116,34 +116,33 @@ main {
   margin-bottom: 1rem;
 }
 
+#content {
+  max-width: 60%;
+  min-width: 60%;
+  display: flex;
+  align-items: center;
+}
+
 #content .text {
   color: white;
   font-size: 0.8rem;
   width: 100%;
-  display: inline-block;
   overflow: hidden;
   transition: 0.4s;
   text-align: center;
   line-height: 2;
 }
 
-#content {
-  max-width: 60%;
-  min-width: 60%;
-}
 .marquee {
   overflow: hidden;
-  font-size: 0.8rem;
   color: #fff;
   max-width: 100%;
   min-width: 100%;
   text-shadow: #000 1px 1px 0;
   font-family: Tahoma, Arial, sans-serif;
-  display: inline-block;
 }
 
 .marquee input {
-  display: inline-block;
   animation: marquee 5s linear infinite;
 }
 
@@ -159,6 +158,7 @@ main {
 .task button {
   margin: 0 -0.5rem;
   cursor: pointer;
+  display: inline-block;
   margin: 0 0.5rem;
   font-size: 0.8rem;
   font-weight: 700;
