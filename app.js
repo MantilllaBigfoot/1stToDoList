@@ -16,7 +16,7 @@ app.set('view engine', 'hbs');
 
 handlebars.registerHelper('isGreaterThan', (input) => {
   console.log(input);
-  return input.length > 25 ? true : false;
+  return input.length > 18 ? true : false;
 });
 
 app.use(serveFavicon(path.join(__dirname, 'public/images', 'favicon.ico')));
