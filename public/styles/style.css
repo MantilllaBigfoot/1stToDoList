@@ -136,10 +136,10 @@ main {
 
 .marquee input {
   display: inline-block;
-  -webkit-animation: marquee 5s linear infinite;
+  animation: marquee 5s linear infinite;
 }
 
-@-webkit-keyframes marquee {
+@keyframes marquee {
   0% {
     -webkit-transform: translateX(100%);
   }
