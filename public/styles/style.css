@@ -115,8 +115,12 @@ main {
   min-width: 60%;
   max-height: 2rem;
   min-height: 2rem;
-  display: flex;
-  align-items: center;
+  position: relative;
+}
+
+#content p {
+  position: absolute;
+  top: -40%;
 }
 
 #content .text {
@@ -124,6 +128,7 @@ main {
   font-size: 0.8rem;
   max-width: 100%;
   min-width: 100%;
+  min-height: 100%;
   overflow: hidden;
   transition: 0.4s;
   text-align: center;
